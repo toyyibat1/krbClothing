@@ -133,7 +133,7 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
       ),
-      body: new ListView(
+      body: new Column(
         children: <Widget>[
           //image carousel begins here
           imageCarousel,
@@ -148,10 +148,7 @@ class _HomePageState extends State<HomePage> {
             child: new Text('Recent products'),
           ),
           //gridView
-          Container(
-            height: 250.0,
-            child: Products(),
-          )
+          Flexible(child: Products())
         ],
       ),
     );
